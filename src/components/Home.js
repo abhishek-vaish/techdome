@@ -97,8 +97,6 @@ const Home = () => {
     fetchData(value.landing, value.launch, value.year);
   }, [value]);
 
-  //   data.map((value) => console.log(value));
-
   return (
     <div>
       <HomePage>
@@ -262,6 +260,7 @@ const Button = styled.button`
 
   &:focus {
     background-color: #7bb901;
+    outline: none;
   }
 `;
 
