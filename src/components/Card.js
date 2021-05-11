@@ -58,7 +58,7 @@ const Image = styled.img`
 const SpaceName = styled.p`
   font-weight: 700;
   color: #5a6090;
-  margin-top: 5px;
+  margin-top: 30px;
   margin-bottom: 10px;
 `;
 const Items = styled.div`
