@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Card from "./Card";
 
 const Home = () => {
+  // declare fileter year
   const year = [
     2006,
     2007,
@@ -21,16 +22,19 @@ const Home = () => {
     2020,
   ];
 
+  //define the hook set filter values
   var [value, setValue] = useState({
     year: null,
     launch: null,
     landing: null,
   });
 
+  // function to change the value of params
   const buttonYear = (new_value) => {
     setValue({ ...value, year: new_value.target.innerText });
   };
 
+  // function to change the value of params
   const buttonlaunch = (new_value) => {
     var convert_value = true;
     if (new_value.target.innerText === "False") {
@@ -38,6 +42,8 @@ const Home = () => {
     }
     setValue({ ...value, launch: convert_value });
   };
+
+  // function to change the value of params
   const buttonlanding = (new_value) => {
     var convert_value = true;
     if (new_value.target.innerText === "False") {
@@ -46,8 +52,13 @@ const Home = () => {
     setValue({ ...value, landing: convert_value });
   };
 
+  // define the hook to set the value of api
   var [data, setData] = useState([]);
+
+  //define the URL
   let url = "https://api.spacexdata.com/v3/launches?limit=100";
+
+  // define the function to set the value of api to variable
   const fetchData = (landing, launch, year) => {
     console.log(year, landing, launch);
     if (landing === null && launch === null && year === null) {
