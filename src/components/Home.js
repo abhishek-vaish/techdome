@@ -172,6 +172,11 @@ export default Home;
 const HomePage = styled.div`
   width: 100%;
   background-color: #f2f2f2;
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
 `;
 
 const Heading = styled.h1`
@@ -195,6 +200,7 @@ const Filter = styled.div`
   flex-direction: column;
   flex: 0.13;
   margin: 20px;
+  width: 250px;
   background-color: #ffffff;
   padding-left: 10px;
   padding-right: 10px;
@@ -207,6 +213,7 @@ const Filter = styled.div`
     margin: 20px 30px;
     padding-left: 5px;
     padding-right: 5px;
+    width: 84%;
   }
 `;
 
@@ -218,6 +225,10 @@ const MainData = styled.div`
   width: 100%;
   flex-direction: column;
 
+  @media (max-width: 700px) {
+    width: 94%;
+  }
+
   @media (min-width: 700px) and (max-width: 1024px) {
     margin: 20px 0px 20px 0px;
   }
@@ -225,7 +236,9 @@ const MainData = styled.div`
 
 const Content = styled.div``;
 
-const FilterHeading = styled.h3``;
+const FilterHeading = styled.h3`
+  margin-left: 3px;
+`;
 
 const LaunchYear = styled.div`
   display: flex;
